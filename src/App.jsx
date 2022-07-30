@@ -58,18 +58,18 @@ function App() {
 
   return (
     <div className="app">
-      <Time data={time} />
-      <div className="app_right">
+      <div className="app_top">
+        <Time data={time} />
         <Laps laps={laps} />
-        <Controller
-          stage={stage}
-          startHandler={startTimer}
-          stopHandler={stopTimer}
-          resumeHandler={resumeTimer}
-          pauseHandler={pauseTimer}
-          lapsHandler={saveLap}
-        />
       </div>
+      <Controller
+        stage={stage}
+        startHandler={startTimer}
+        stopHandler={stopTimer}
+        resumeHandler={resumeTimer}
+        pauseHandler={pauseTimer}
+        lapsHandler={saveLap}
+      />
     </div>
   );
 }
